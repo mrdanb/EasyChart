@@ -4,6 +4,8 @@ import UIKit
 
 internal class GridView: UIView {
 
+    internal 
+
     override class var layerClass: AnyClass {
         return GridLayer.self
     }
