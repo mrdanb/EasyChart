@@ -15,6 +15,7 @@ open class Chart: UIView {
 
     public init() {
         super.init(frame: .zero)
+        setup()
     }
 
     @available(*, unavailable)
@@ -24,7 +25,7 @@ open class Chart: UIView {
 
     public func append(data: Series, type: PlotType) {
         series.append(data)
-//        chartView.addPlots()
+        chartView.addPlots(for: data, type: type)
         recalculateAxisValues()
     }
 

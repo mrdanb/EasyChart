@@ -2,9 +2,9 @@
 
 import UIKit
 
-internal class GridView: UIView {
+internal typealias PlotView = UIView & Plotable
 
-    internal 
+internal final class GridView: UIView {
 
     override class var layerClass: AnyClass {
         return GridLayer.self
@@ -15,7 +15,7 @@ internal class GridView: UIView {
     }
 }
 
-private class GridLayer: CAShapeLayer {
+private final class GridLayer: CAShapeLayer {
 
     fileprivate var divisions: Int = DefaultValues.Axis.divisions {
         didSet { setNeedsLayout() }
@@ -46,7 +46,7 @@ private class GridLayer: CAShapeLayer {
         let path = UIBezierPath()
         for position in linePositions() {
             path.move(to: CGPoint(x: 0, y: position))
-            path.move(to: CGPoint(x: bounds.width, y: position))
+            path.addLine(to: CGPoint(x: bounds.width, y: position))
         }
         return path
     }

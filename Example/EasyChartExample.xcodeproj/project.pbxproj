@@ -19,6 +19,10 @@
 		012D740B2423EFFF0051270E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012D740A2423EFFF0051270E /* Assets.xcassets */; };
 		012D740E2423EFFF0051270E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012D740C2423EFFF0051270E /* LaunchScreen.storyboard */; };
 		012D74142423F02C0051270E /* libEasyChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 012D73E32423EFB00051270E /* libEasyChart.a */; };
+		012D741A2423F9930051270E /* PlotsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D74192423F9930051270E /* PlotsContainerView.swift */; };
+		012D741C242405A40051270E /* BarPlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D741B242405A40051270E /* BarPlotView.swift */; };
+		012D741E242406010051270E /* LinePlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D741D242406010051270E /* LinePlotView.swift */; };
+		012D7420242407F10051270E /* Plotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D741F242407F10051270E /* Plotable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		012D740A2423EFFF0051270E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012D740D2423EFFF0051270E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012D740F2423EFFF0051270E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012D74192423F9930051270E /* PlotsContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotsContainerView.swift; sourceTree = "<group>"; };
+		012D741B242405A40051270E /* BarPlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarPlotView.swift; sourceTree = "<group>"; };
+		012D741D242406010051270E /* LinePlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinePlotView.swift; sourceTree = "<group>"; };
+		012D741F242407F10051270E /* Plotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plotable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,10 @@
 				012D73F32423EFD30051270E /* ChartView.swift */,
 				012D73F42423EFD30051270E /* Chart.swift */,
 				012D73F52423EFD30051270E /* GridView.swift */,
+				012D74192423F9930051270E /* PlotsContainerView.swift */,
+				012D741B242405A40051270E /* BarPlotView.swift */,
+				012D741D242406010051270E /* LinePlotView.swift */,
+				012D741F242407F10051270E /* Plotable.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,9 +263,13 @@
 			files = (
 				012D73F92423EFD30051270E /* Chart.swift in Sources */,
 				012D73F72423EFD30051270E /* Series.swift in Sources */,
+				012D7420242407F10051270E /* Plotable.swift in Sources */,
+				012D741A2423F9930051270E /* PlotsContainerView.swift in Sources */,
 				012D73F62423EFD30051270E /* Defaults.swift in Sources */,
+				012D741C242405A40051270E /* BarPlotView.swift in Sources */,
 				012D73FA2423EFD30051270E /* GridView.swift in Sources */,
 				012D73F82423EFD30051270E /* ChartView.swift in Sources */,
+				012D741E242406010051270E /* LinePlotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

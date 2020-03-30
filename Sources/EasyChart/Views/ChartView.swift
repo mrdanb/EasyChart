@@ -11,9 +11,11 @@ internal class ChartView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
     }()
+    private lazy var plotsContainer = PlotsContainerView()
 
     internal init() {
         super.init(frame: .zero)
+        setup()
     }
 
     @available(*, unavailable)
@@ -29,10 +31,11 @@ internal class ChartView: UIView {
     private func addSubviews() {
         addSubview(gridView)
         addSubview(scrollView)
+        scrollView.addSubview(plotsContainer)
     }
 
     private func constrainSubviews() {
-        [gridView, scrollView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        [gridView, scrollView, plotsContainer].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         NSLayoutConstraint.activate([
             gridView.leadingAnchor.constraint(equalTo: leadingAnchor),
             gridView.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -43,6 +46,18 @@ internal class ChartView: UIView {
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             scrollView.topAnchor.constraint(equalTo: topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
+            plotsContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            plotsContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            plotsContainer.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            plotsContainer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            plotsContainer.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
         ])
+    }
+}
+
+internal extension ChartView {
+    func addPlots(for data: Series, type: Chart.PlotType) {
+        
     }
 }
